@@ -28,7 +28,7 @@ namespace WebApplication8
                     pass += password[i];
                 }
             }
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Hp\source\repos\WebApplication8\App_Data\Database1.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\itzch\source\repos\WebApplication8\App_Data\Database1.mdf;Integrated Security=True");
             try
             {
                 using (con)
