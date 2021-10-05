@@ -16,6 +16,8 @@
 	            <a href="#">Logout</a>
 	            <a href="#">Contact Us</a>
             </nav>
+            <br />
+            <br />
             Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
             <br />

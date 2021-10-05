@@ -81,12 +81,6 @@ nav {
 
 @for $i from 1 through 5 {
     nav a:nth-child(#{$i}) {
-        animation: show .2s #
-
-{
-    $i*0.1+1
-}
-
-s ease 1 both;
-}
+        animation: show .2s #{$i*0.1+1}s ease 1 both;
+    }
 }
