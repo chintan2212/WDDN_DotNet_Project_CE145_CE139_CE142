@@ -5,10 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="navbar.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <nav>
+	            <a href="#">Home</a>
+	            <a href="Student_Register.aspx">Register</a>
+	            <a href="#">Logout</a>
+	            <a href="#">Contact Us</a>
+            </nav>
+
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />

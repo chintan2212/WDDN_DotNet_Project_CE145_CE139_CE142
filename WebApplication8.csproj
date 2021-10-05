@@ -73,6 +73,7 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="navbar.css" />
     <Content Include="Student_Register.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />

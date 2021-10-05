@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="navbar.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .auto-style1 {
             margin-top: 4px;
