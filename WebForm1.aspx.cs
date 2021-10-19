@@ -35,7 +35,7 @@ namespace WebApplication8
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\itzch\source\repos\WebApplication8\App_Data\Database1.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\WDDN_Project\App_Data\Database1.mdf;Integrated Security=True");
             try
             {
                 using (con)
@@ -45,14 +45,9 @@ namespace WebApplication8
                     string command = "select * from Students where Students.Id = " + i + " and Students.student_dob = " + pass;
                     SqlCommand cmd = new SqlCommand(command, con);
                     SqlDataReader rdr = cmd.ExecuteReader();
-                    if(rdr.HasRows)
-                    {
-                        while(rdr.Read())
-                        {
-                          sem = rdr["student_sem"].ToString();
-                        }
-                    }
+                    sem = DropDownList1.SelectedValue.ToString();
                     rdr.Close();
+
                     string command1 = "select * from " + sem + " where studentid = " + i;
                     SqlCommand cmd1 = new SqlCommand(command1, con);
                     SqlDataReader rdr1 = cmd1.ExecuteReader();
@@ -84,6 +79,28 @@ namespace WebApplication8
             
         }
 
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\WDDN_Project\App_Data\Database1.mdf;Integrated Security=True");
+            try
+            {
+                using (con)
+                {
+                  
+                    string url;
+                    url = "user_profile.aspx?Id=" +
+                        i + "&Name=" +
+                        name;
+                    Response.Redirect(url);
+
+                }
+            }
+
+            catch (Exception err)
+            {
+                Response.Write("error while connecting to database\n" + err);
+            }
         
+        }
     }
 }

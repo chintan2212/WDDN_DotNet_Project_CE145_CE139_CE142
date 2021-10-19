@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <nav>
-	            <a href="#">Home</a>
+	            <a href="StudentList.aspx">Home</a>
 	            <a href="Student_Register.aspx">Register</a>
 	            <a href="#">Logout</a>
 	            <a href="#">Contact Us</a>

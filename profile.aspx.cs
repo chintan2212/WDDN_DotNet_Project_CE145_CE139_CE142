@@ -12,7 +12,8 @@ namespace WebApplication8
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\itzch\source\repos\WebApplication8\App_Data\Database1.mdf;Integrated Security=True");
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\WDDN_Project\App_Data\Database1.mdf;Integrated Security=True");
             try
             {
                 using (con)
@@ -20,7 +21,7 @@ namespace WebApplication8
                     string id = Request.QueryString["Id"];
                     string name = Request.QueryString["Name"];
                     con.Open();
-                    string command = "select * from Students where Id = " + id;
+                    string command = "select * from Students where Id = '" + id + "'";
                     SqlCommand cmd = new SqlCommand(command, con);
                     SqlDataReader rdr = cmd.ExecuteReader();
                     if (rdr.Read())

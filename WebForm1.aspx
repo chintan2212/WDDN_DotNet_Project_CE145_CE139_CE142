@@ -12,15 +12,19 @@
         <div>
             <nav>
 	            <a href="#">Home</a>
-	            <a href="Student_Register.aspx">Register</a>
 	            <a href="#">Logout</a>
 	            <a href="#">Contact Us</a>
+                
             </nav>
 
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
+            <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:ListItem>sem4</asp:ListItem>
+                <asp:ListItem>sem5</asp:ListItem>
+            </asp:DropDownList>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="show marks" align="center" />
@@ -43,6 +47,7 @@
             </asp:GridView>
             <asp:Label ID="Label1" runat="server"></asp:Label>
             <br />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click1" Text="Show profile" />
             <br />
         </div>
     </form>

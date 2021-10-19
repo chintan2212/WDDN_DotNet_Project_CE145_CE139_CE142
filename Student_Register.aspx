@@ -11,10 +11,10 @@
     <form id="form1" runat="server">
         <div>
             <nav>
-	            <a href="#">Home</a>
-	            <a href="Student_Register.aspx">Register</a>
+	            <a href="AdminPage.aspx">Back</a>
+                <a href="StudentList.aspx">Student List</a>
 	            <a href="#">Logout</a>
-	            <a href="#">Contact Us</a>
+	            <%--<a href="#">Contact Us</a>--%>
             </nav>
             <br />
             <br />
@@ -22,15 +22,21 @@
             <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
             <br />
             <br />
-            Date of Birth :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            Date of Birth :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox2" runat="server" TextMode="Date"></asp:TextBox>
             <br />
 &nbsp;&nbsp;&nbsp;
             <br />
             Semester :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:ListItem>Sem1</asp:ListItem>
+                <asp:ListItem>Sem2</asp:ListItem>
+                <asp:ListItem>Sem3</asp:ListItem>
+                <asp:ListItem>Sem4</asp:ListItem>
+                <asp:ListItem>Sem5</asp:ListItem>
+            </asp:DropDownList>
             <br />
             <br />
-            Emain Address :&nbsp;&nbsp; <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+            Email Address :&nbsp;&nbsp; <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
             <br />
             <br />
             City :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
@@ -41,7 +47,11 @@
             <br />
             <br />
             Gender :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+                <asp:ListItem>male</asp:ListItem>
+                <asp:ListItem>female</asp:ListItem>
+            </asp:RadioButtonList>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
             Categeory :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -55,6 +65,9 @@
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Student" />
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server"></asp:Label>
         </div>
     </form>
 </body>

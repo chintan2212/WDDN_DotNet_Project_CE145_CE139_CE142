@@ -48,6 +48,9 @@
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" ForeColor="Black" OnClick="Button1_Click" Text="Login" />
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AdminLogin.aspx">Admin?</asp:HyperLink>
+            <br />
         </div>
     </form>
 </body>
